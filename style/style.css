@@ -1,0 +1,222 @@
+/* css reset from joshwcomeau.com */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*img,*/
+
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --clr-bg-100: #fff;
+    --clr-bg-100: #000;
+    --clr-neutral-100: #fff;
+    --clr-neutral-900: #fff;
+    --clr-neutral-1: hsl(221, 100%, 96%);
+    --clr-neutral-2: hsl(241, 100%, 89%);
+    --clr-neutral-3: hsl(224, 30%, 27%);
+    --clr-primary-1: hsl(0, 100%, 67%);
+    --clr-primary-2: hsl(39, 100%, 56%);
+    --clr-primary-3: hsl(166, 100%, 37%);
+    --clr-primary-4: hsl(234, 85%, 45%);
+    /* can change hsl to hexa */
+    --clr-gradient-1: hsl(252, 100%, 67%);
+    --clr-gradient-2: hsl(241, 81%, 54%);
+    --clr-gradient-3: hsla(256, 72%, 46%, 1);
+    --clr-gradient-4: hsla(241, 72%, 46%, 0);
+    --font-fam: 'Hanken Grotesk', sans-serif;
+}
+
+
+/* style */
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: var(--font-fam);
+    font-size: 18px;
+    max-width: 700px;
+    max-height: 520px;
+    /* you can use also 1.125rem */
+}
+
+.left {
+    background: linear-gradient(var(--clr-gradient-1), var(--clr-gradient-2));
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    border-radius: 0 0 24px 24px;
+    padding: 18px 36px;
+}
+
+.left h3 {
+    color: var(--clr-neutral-2);
+    font-size: 18px;
+}
+
+.left .point {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--clr-gradient-3), var(--clr-gradient-4));
+    color: var(--clr-neutral-1);
+    font-size: 64px;
+    width: 128px;
+    height: 128px;
+    padding: 32px;
+    border-radius: 50%;
+}
+
+.left .point span.of {
+    font-size: 12px;
+    color: var(--clr-neutral-2);
+}
+
+.left h2 {
+    font-size: 24px;
+    color: var(--clr-neutral-1);
+}
+
+.left p {
+    font-size: 18px;
+    color: var(--clr-neutral-2);
+    margin: 0 0 10px;
+}
+
+.right {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 24px 32px;
+    gap: 24px;
+}
+
+.right h2 {
+    color: var(--clr-neutral-3);
+}
+
+.right .sum {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: hsla(0, 100%, 67%, 0.05);
+    color: var(--clr-primary-1);
+    border: 1px solid hsla(0, 100%, 67%, 0.05);
+    border-radius: 12px;
+    padding: 12px 6px;
+    font-size: 18px;
+}
+
+.right .sum2 {
+    background: hsla(39, 100%, 56%, 0.05);
+    color: var(--clr-primary-2);
+    border: 1px solid hsla(39, 100%, 56%, 0.05);
+}
+
+.right .sum3 {
+    background: hsla(166, 100%, 37%, 0.05);
+    color: var(--clr-primary-3);
+    border: 1px solid hsla(166, 100%, 37%, 0.05);
+}
+
+.right .sum4 {
+    background: hsla(234, 85%, 45%, 0.05);
+    color: var(--clr-primary-4);
+    border: 1px solid hsla(234, 85%, 45%, 0.05);
+}
+
+.right .sum img {
+    vertical-align: middle;
+}
+
+.right .sum .sum-right {
+    color: var(--clr-neutral-2);
+}
+
+.right .sum .sum-right span {
+    color: var(--clr-neutral-3);
+}
+
+.right button {
+    border: none;
+    background: var(--clr-neutral-3);
+    padding: 12px 16px;
+    text-align: center;
+    color: var(--clr-neutral-1);
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.right button:hover {
+    background: linear-gradient(var(--clr-gradient-1), var(--clr-gradient-2));
+}
+
+@media screen and (min-width: 712px) {
+    body {
+        display: grid;
+        place-content: center;
+    }
+    .container {
+        flex-direction: row;
+    }
+    .left {
+        border-radius: 24px;
+        gap: 42px;
+    }
+    .left .point {
+        width: 164px;
+        height: 164px;
+    }
+    .right .sum {
+        width: 300px;
+    }
+}
